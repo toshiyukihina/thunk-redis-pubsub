@@ -1,0 +1,16 @@
+{
+  "name": "thunk-redis-pubsub",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^2.9.25",
+    "thunk-redis": "^0.9.6",
+    "yargs": "^3.8.0"
+  }
+}
