@@ -1,3 +1,5 @@
+'use strict';
+
 var redis = require('thunk-redis'),
     Promise = require('bluebird'),
     yargs = require('yargs')
@@ -45,8 +47,8 @@ var subscribe = function(client, argv) {
 
 
 // Execute command
-(function(argv) {
-  var client = redis.createClient(argv.port, { usePromise: Promise });
+(function() {
+  var client = redis.createClient(yargs.argv.port, { usePromise: Promise });
   client
     .on('warn', function(e) {
       console.warn(e);
@@ -74,5 +76,6 @@ var subscribe = function(client, argv) {
     subscribe(client, yargs.argv);
   };
 
-  f[argv._[0]]();
-})(yargs.argv);
+  var command = yargs.argv._[0];
+  f[command]();
+})();
