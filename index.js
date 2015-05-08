@@ -3,7 +3,7 @@
 var redis = require('thunk-redis'),
     Promise = require('bluebird'),
     yargs = require('yargs')
-      .usage('$0 command')
+      .usage('node $0 command')
       .options({
         'p': {
           alias: 'port',
