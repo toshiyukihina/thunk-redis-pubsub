@@ -61,7 +61,7 @@ var subscribe = function(client, argv) {
 
   f.pub = function() {
     yargs.reset()
-      .usage('$0 pub <channel> <message>')
+      .usage('node $0 pub <channel> <message>')
       .demand(['c', 'm'])
       .alias('c', 'channel')
       .alias('m', 'message');
@@ -70,7 +70,7 @@ var subscribe = function(client, argv) {
 
   f.sub = function() {
     yargs.reset()
-      .usage('$0 sub <channel>')
+      .usage('node $0 sub <channel>')
       .demand('c')
       .alias('c', 'channel');
     subscribe(client, yargs.argv);
